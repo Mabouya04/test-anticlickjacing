@@ -5,16 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clickjacking Test</title>
     <style>
-        iframe {
-            border-style: solid;
-        }
-        body{
-            margin-left: auto;
-            margin-right: auto;
-        }
-        h1{
-            text-align:center;
-        }
+        body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Agar seluruh halaman terpusat secara vertikal */
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+iframe {
+    border-style: solid;
+    display: block; /* Pastikan tidak ada margin bawaan */
+    margin: auto; /* Pusatkan secara horizontal */
+}
+
     </style>
 </head>
 <body>
